@@ -25,7 +25,7 @@ function NoteForm({ setNotes }) {
             <input
                 type="text"
                 name="body"
-                placeholder="Type something papacito 🥵"
+                placeholder="Only Shawtys names 🥵"
             />
         </form>
     );

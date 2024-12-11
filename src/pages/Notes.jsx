@@ -23,7 +23,7 @@ function Notes() {
     return (
         <>
             <div>
-                <h1>Testing Appwrite Todo App</h1>
+                <h1>Testing Appwrite w Noe</h1>
                 <br />
                 {/* Not working idk why */}
                 {/* <div className="theme-options">
