@@ -10,12 +10,14 @@ const Auth = () => {
     const checkUser = async () => {
       try {
         const userData = await getUser()
-        setUser(userData)
+        setUser(userData);
+        localStorage.setItem('user', JSON.stringify(userData));
         if (userData) {
           navigate('/')
         }
       } catch (error) {
         setUser(null)
+        localStorage.removeItem('user')
       }
     }
 

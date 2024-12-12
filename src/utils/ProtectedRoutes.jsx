@@ -13,7 +13,7 @@ const ProtectedRoutes = () => {
     useEffect(() => {
         const checkUser = async () => {
             try {
-                const userData = await getUser();
+                const userData = JSON.parse(localStorage.getItem("user"));
                 setUser(userData);
             } catch (error) {
                 setUser(null);
