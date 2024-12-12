@@ -1,6 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Notes from "./pages/Notes";
 import LoginRegister from "./pages/LoginRegister";
+import ProtectedRoutes from "./utils/ProtectedRoutes";
+import Auth from "./components/Auth";
 
 function App() {
     return (
@@ -8,8 +10,11 @@ function App() {
             <div id="container">
                 <BrowserRouter>
                     <Routes>
-                        <Route element={<Notes />} path="/" />
-                        <Route element={<LoginRegister />} path="/login" />
+                        <Route element={<Auth />} path="/login" />
+
+                        <Route element={<ProtectedRoutes />}>
+                            <Route element={<Notes />} path="/" />
+                        </Route>
                     </Routes>
                 </BrowserRouter>
             </div>
